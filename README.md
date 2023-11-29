@@ -14,8 +14,9 @@ Compile the code with `catkin_make`.
 ## Running the Node
 Once you have the node built, you can run it using a launch file.
 
-source /opt/ros/noetic/setup.bash
-Run `roslaunch image_pub mp4.launch`
+source ros:
+`source /opt/ros/noetic/setup.bash`
+Run: `roslaunch image_pub mp4.launch`
 
 It will launch a sample mp4 file
 
