@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 
     cv::VideoCapture vid_cap(img_path.c_str());
     if (start_sec > 0)
-        vid_cap.set(CV_CAP_PROP_POS_MSEC, 1000.0 * start_sec);
+        vid_cap.set(cv::CAP_PROP_POS_MSEC, 1000.0 * start_sec);
 
     if (!vid_cap.isOpened())
     {
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
             {
                 vid_cap.open(img_path.c_str());
                 if (start_sec > 0)
-                    vid_cap.set(CV_CAP_PROP_POS_MSEC, 1000.0 * start_sec);
+                    vid_cap.set(cv::CAP_PROP_POS_MSEC, 1000.0 * start_sec);
                 continue;
             }
             ROS_ERROR("Failed to capture frame.");
@@ -83,7 +83,7 @@ int main(int argc, char **argv)
             if (img.type() != CV_8UC3)
                 img.convertTo(img, CV_8UC3);
             // Convert image from BGR format used by OpenCV to RGB.
-            cv::cvtColor(img, img, CV_BGR2RGB);
+            cv::cvtColor(img, img, cv::COLOR_BGR2RGB);
 
             auto img_msg = boost::make_shared<sensor_msgs::Image>();
             img_msg->header.stamp    = ros::Time::now();
