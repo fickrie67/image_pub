@@ -7,7 +7,7 @@ Go to your catkin_ws folder location, for example `cd ~/catkin_ws/src`.
 
 Download the source for this node by running
 
-`git clone https://github.com/ladrians/image_pub`
+`git clone [https://github.com/fickrie67/image_pub.git]`
 
 Compile the code with `catkin_make`.
 
